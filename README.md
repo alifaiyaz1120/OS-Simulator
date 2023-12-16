@@ -37,52 +37,58 @@ struct MemoryItem
 };
 
 using MemoryUsage = std::vector<MemoryItem>;
+```
 
-Class: SimOS
-Methods
-SimOS(int numberOfDisks, unsigned long long amountOfRAM): Constructor to initialize the simulator with the number of disks and amount of RAM.
+### Class: SimOS
+- Methods
+    - SimOS(int numberOfDisks, unsigned long long amountOfRAM): Constructor to initialize the simulator with the number of disks and amount of RAM.
 
-bool NewProcess(int priority, unsigned long long size): Create a new process with specified priority and memory size.
+     - bool NewProcess(int priority, unsigned long long size): Create a new process with specified priority and memory size.
 
-bool SimFork(): Fork a child process.
+     - bool SimFork(): Fork a child process.
 
-void SimExit(): Terminate the currently running process.
+     - void SimExit(): Terminate the currently running process.
 
-void SimWait(): Pause and wait for child processes to terminate.
+     - void SimWait(): Pause and wait for child processes to terminate.
 
-void DiskReadRequest(int diskNumber, std::string fileName): Request to read a file from a disk.
+     - void DiskReadRequest(int diskNumber, std::string fileName): Request to read a file from a disk.
 
-void DiskJobCompleted(int diskNumber): Report completion of a disk job.
+     - void DiskJobCompleted(int diskNumber): Report completion of a disk job.
 
-int GetCPU(): Get the PID of the process currently using the CPU.
+     - int GetCPU(): Get the PID of the process currently using the CPU.
 
-std::vector<int> GetReadyQueue(): Get PIDs of processes in the ready-queue.
+     - std::vector<int> GetReadyQueue(): Get PIDs of processes in the ready-queue.
 
-MemoryUsage GetMemory(): Get memory usage information.
+     - MemoryUsage GetMemory(): Get memory usage information.
 
-FileReadRequest GetDisk(int diskNumber): Get information about the file read request for a specified disk.
+     - FileReadRequest GetDisk(int diskNumber): Get information about the file read request for a specified disk.
 
-std::queue<FileReadRequest> GetDiskQueue(int diskNumber): Get the I/O-queue of a specified disk.
+     - std::queue<FileReadRequest> GetDiskQueue(int diskNumber): Get the I/O-queue of a specified disk.
+ 
+# How to Run
+   1. Clone this repository to your local machine.
 
-How to Run
-Clone this repository to your local machine.
+   2. Open the test driver file (with main() function) in your preferred code editor.
 
-Open the test driver file (with main() function) in your preferred code editor.
+   3. Build the project using the compilation command:
 
-Build the project using the compilation command:
+```cpp
+    g++ -std=c++17 *.cpp -o runme
+    
+```
+4. Run the executable:
 
-bash
-Copy code
-g++ -std=c++17 *.cpp -o runme
-Run the executable:
 
-bash
-Copy code
+```cpp
 ./runme
-Review the output for correct simulation results.
+
+```
+
+5. Review the output for correct simulation results.
 
 Additional Notes
-Customize the test driver file to create and test scenarios.
-Ensure correct output by comparing it with expected results.
-For Linux compilation, use the provided command with the correct file names.
-Happy simulating!
+- Customize the test driver file to create and test scenarios.
+- Ensure correct output by comparing it with expected results.
+- For Linux compilation, use the provided command with the correct file names.
+
+
