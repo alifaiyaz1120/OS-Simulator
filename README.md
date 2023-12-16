@@ -2,23 +2,23 @@
 
 This project involves creating an operating system simulator with CPU scheduling, memory management, and disk management functionalities.
 
-### CPU Scheduling
+## CPU Scheduling
 
 - Priority-based scheduling.
 - Preemptive scheduling: Higher priority processes preempt lower priority ones.
 - If multiple processes have the same highest priority, any of them can be scheduled.
 
-### Memory Management
+## Memory Management
 
 - Contiguous memory allocation.
 - "Best-fit" approach: Allocate memory from the hole that best fits the process size.
 - First-fit approach when multiple holes fit equally well.
 
-### Disk Management
+## Disk Management
 
 - First-come-first-served (FIFO) disk I/O queues.
 
-### Structs
+## Structs
 
 ```cpp
 struct FileReadRequest
@@ -37,7 +37,7 @@ struct MemoryItem
 using MemoryUsage = std::vector<MemoryItem>;
 ```
 
-### Class: SimOS
+## Class: SimOS
 - Methods
     - SimOS(int numberOfDisks, unsigned long long amountOfRAM): Constructor to initialize the simulator with the number of disks and amount of RAM.
 
@@ -63,7 +63,7 @@ using MemoryUsage = std::vector<MemoryItem>;
 
      - std::queue<FileReadRequest> GetDiskQueue(int diskNumber): Get the I/O-queue of a specified disk.
  
-# How to Run
+## How to Run
    1. Clone this repository to your local machine.
 
    2. Open the test driver file (with main() function) in your preferred code editor.
@@ -84,7 +84,7 @@ g++ -std=c++17 *.cpp -o runme
 
 5. Review the output for correct simulation results.
 
-Additional Notes
+## Additional Notes
 - Customize the test driver file to create and test scenarios.
 - Ensure correct output by comparing it with expected results.
 - For Linux compilation, use the provided command with the correct file names.
