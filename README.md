@@ -1,8 +1,6 @@
 # OS-Simulator
 Operating System Simulator 
 
-“OS simulation”
- 
 CPU scheduling is priority-based. Every process has a priority number. The higher is the number, the higher is priority. The process with higher priority uses the CPU. The scheduling is preemptive. It means that if a process with the higher priority arrives to the ready-queue while a lower-priority process uses the CPU, the lower-priority process is preempted (that is moved back to ready-queue) while the higher priority process immediately starts using the CPU. Pay attention, higher-priority process never waits in the ready-queue while lower-priority process uses the CPU.
 If there are two or more processes with the same highest priority in the ready-queue, your system can schedule any of them to the CPU.
  
