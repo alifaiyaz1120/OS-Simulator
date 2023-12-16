@@ -1,4 +1,4 @@
-## Operating System Simulator
+# Operating System Simulator
 
 This project involves creating an operating system simulator with CPU scheduling, memory management, and disk management functionalities.
 
