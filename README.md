@@ -72,14 +72,14 @@ using MemoryUsage = std::vector<MemoryItem>;
 
    3. Build the project using the compilation command:
 
-```cpp
-    g++ -std=c++17 *.cpp -o runme
-    
+```bash
+g++ -std=c++17 *.cpp -o runme
+
 ```
 4. Run the executable:
 
 
-```cpp
+```bash
 ./runme
 
 ```
