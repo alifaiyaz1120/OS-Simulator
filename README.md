@@ -2,6 +2,9 @@
 
 This project involves creating an operating system simulator with CPU scheduling, memory management, and disk management functionalities.
 
+## Created By:
+- Ali Faiyaz
+
 ## CPU Scheduling
 
 - Priority-based scheduling.
